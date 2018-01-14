@@ -1,0 +1,39 @@
+\documentclass{article} % 自用的笔记模板格式
+\usepackage[CJKchecksingle,CJKnumber]{xeCJK} %解决中文显示问题
+\usepackage{tikz} % 绘图
+\usepackage{indentfirst} % 首行缩进
+\usepackage{setspace} % 行间距
+
+
+\newCJKfontfamily[fs]\fs{FangSong} % 仿宋
+\newCJKfontfamily[kai]\kai{KaiTi} % 楷体
+\newCJKfontfamily[yh]\yh{Microsoft YaHei} % 微软雅黑
+\setlength{\parindent}{2em} % 设置首行缩进2个字符（只对段落有效）
+\setmainfont{Times New Roman} % 设置英文主要字体
+
+\newcommand{\TP}[1]{\begin{spacing}{1.4}\par{#1}\end{spacing}}% 段落
+\newcommand{\TL}[1]{\begin{flushleft}#1\end{flushleft}}% 文字居左
+\newcommand{\TR}[1]{\begin{flushright}#1\end{flushright}}% 文字居右
+\newcommand{\TC}[1]{\begin{center}#1\end{center}}% 文字居中
+\newcommand{\x}[1]{\TL{\fontsize{28pt}{0}\textbf{\kai#1}\\[1.5em] \hrule}}% 1号标题，模拟markdown格式，下同
+\newcommand{\xx}[1]{\TL{\fontsize{24pt}{0}\textbf{\yh#1}\\[1.3em]}}
+\newcommand{\xxx}[1]{\TL{\fontsize{20pt}{0}\textbf{\yh#1}\\[1.25em]}}
+\newcommand{\xxxx}[1]{\TL{\fontsize{16pt}{0}\textbf{\yh#1}\\[1.25em]}}
+\newcommand{\xxxxx}[1]{\TL{\fontsize{12pt}{0}\textbf{\yh#1}\\[1.25em]}}
+\newcommand{\xxxxxx}[1]{\TL{\fontsize{10pt}{0}\textbf{\yh#1}\\[1.25em]}}
+\newcommand{\xs}[1]{\TL{\fontsize{8.5pt}{0}#1\\[1.5em]}}% 比正常字体（10pt）略小的小字
+
+\begin{document}
+	\x{总标题——笔记模板}
+	\xx{标题2}
+	\xxx{标题3}
+	\xxxx{标题4}
+	\xxxxx{标题5}
+	\xxxxxx{标题6}
+	普通的文字$x=a+b$
+	\xs{小字}
+	\xxx{段落展示}
+	\TP{本书基于Python3.5版本进行讲解，通过13章的内容，深度揭示了Python编程的高级技巧。本书从Python语言及其社区的现状开始介绍，对Python语法、命名规则、Python包的编写、部署代码、扩展程序开发、管理代码、文档编写、测试开发、代码优化、并发编程、设计模式等重要话题进行了全面系统化的讲解。}
+	\TP{可以看到文章的主体部分使用的Times New Roman字体，局部可以使用其他的字体。要使用不同的英文字体，首先需要知道有哪些可以使用的英文字体，得到它们的名称，然后使用fontspec设置即可。对于我来说，偷懒的方法就是在Word中去找那些字体，然后得到字体的名称。}
+	
+\end{document}
